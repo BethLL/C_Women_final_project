@@ -11,6 +11,7 @@ by = "^0.0.4"
 selenium = "^4.25.0"
 pytest = "^8.3.3"
 pytest-xdist = "^3.6.1"
+driver = "^0.1.0"
 
 
 [build-system]
