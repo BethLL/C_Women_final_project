@@ -43,7 +43,7 @@ def test_registration():
 
     driver.find_element(By.NAME, "submit").click()
     time.sleep(3)
-    success = driver.get_screenshot_as_file("screenshot.png")
+    success = driver.get_screenshot_as_file("screenshot1.png")
     if success:
         print("Screenshot saved successfully.")
     else:
@@ -90,7 +90,7 @@ def test_edit_profile():
         element.clear()
         element.send_keys(value)
         time.sleep(1)
-    success = driver.get_screenshot_as_file("screenshot.png")
+    success = driver.get_screenshot_as_file("screenshot2.png")
     if success:
         print("Screenshot saved successfully.")
     else:

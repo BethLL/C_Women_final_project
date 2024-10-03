@@ -47,7 +47,7 @@ def test_quotation_generation_and_saving():
         element.clear()
         element.send_keys(value)
         time.sleep(1)
-    success = driver.get_screenshot_as_file("screenshot.png")
+    success = driver.get_screenshot_as_file("screenshot3.png")
     if success:
         print("Screenshot saved successfully.")
     else:
@@ -60,7 +60,7 @@ def test_quotation_generation_and_saving():
 
     radio_button = driver.find_element(By.CSS_SELECTOR, "input[type='radio'][value='Yes']")
     radio_button.click()
-    success = driver.get_screenshot_as_file("screenshot.png")
+    success = driver.get_screenshot_as_file("screenshot4.png")
     if success:
         print("Screenshot saved successfully.")
     else:
@@ -75,7 +75,7 @@ def test_quotation_generation_and_saving():
     print("Test passed successfully")
 
     driver.back()
-    success = driver.get_screenshot_as_file("screenshot.png")
+    success = driver.get_screenshot_as_file("screenshot5.png")
     if success:
         print("Screenshot saved successfully.")
     else:
@@ -88,7 +88,7 @@ def test_quotation_generation_and_saving():
     retrieve_quotation = driver.find_element(By.NAME, "id")
     retrieve_quotation.send_keys('41823')
     time.sleep(1)
-    success = driver.get_screenshot_as_file("screenshot.png")
+    success = driver.get_screenshot_as_file("screenshot6.png")
     if success:
         print("Screenshot saved successfully.")
     else:
