@@ -43,6 +43,11 @@ def test_registration():
 
     driver.find_element(By.NAME, "submit").click()
     time.sleep(3)
+    success = driver.get_screenshot_as_file("screenshot.png")
+    if success:
+        print("Screenshot saved successfully.")
+    else:
+        print("Failed to save screenshot.")
 
     element = driver.find_element(By.XPATH, "/html/body/div[3]/h3")
     fetched_text = element.text
@@ -85,6 +90,11 @@ def test_edit_profile():
         element.clear()
         element.send_keys(value)
         time.sleep(1)
+    success = driver.get_screenshot_as_file("screenshot.png")
+    if success:
+        print("Screenshot saved successfully.")
+    else:
+        print("Failed to save screenshot.")
 
     driver.find_element(By.NAME, "commit").click()
     time.sleep(2)

@@ -15,6 +15,12 @@ def test_login_and_logout():
     driver.find_element(By.ID, "email").send_keys(email_login)
     driver.find_element(By.ID, "password").send_keys(password_login)
     driver.find_element(By.NAME, "submit").click()
+    success = driver.get_screenshot_as_file("screenshot.png")
+    if success:
+        print("Screenshot saved successfully.")
+    else:
+        print("Failed to save screenshot.")
+
     time.sleep(3)
     print("Login successful")
 
