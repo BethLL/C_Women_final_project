@@ -43,8 +43,8 @@ def test_registration():
 
     driver.find_element(By.NAME, "submit").click()
     time.sleep(3)
-    success = driver.get_screenshot_as_file("screenshot1.png")
-    if success:
+    success3 = driver.get_screenshot_as_file("registration_screenshot.png")
+    if success3:
         print("Screenshot saved successfully.")
     else:
         print("Failed to save screenshot.")
@@ -64,6 +64,12 @@ def test_edit_profile():
 
     driver.find_element(By.ID, "email").send_keys(email_login)
     driver.find_element(By.ID, "password").send_keys(password_login)
+    success4 = driver.get_screenshot_as_file("login_again_screenshot.png")
+    if success4:
+        print("Screenshot saved successfully.")
+    else:
+        print("Failed to save screenshot.")
+
     driver.find_element(By.NAME, "submit").click()
 
     edit_profile = WebDriverWait(driver, 10).until(
@@ -90,8 +96,8 @@ def test_edit_profile():
         element.clear()
         element.send_keys(value)
         time.sleep(1)
-    success = driver.get_screenshot_as_file("screenshot2.png")
-    if success:
+    success5 = driver.get_screenshot_as_file("edition_screenshot.png")
+    if success5:
         print("Screenshot saved successfully.")
     else:
         print("Failed to save screenshot.")
@@ -104,3 +110,8 @@ def test_edit_profile():
 
     print("Test passed successfully")
     driver.quit()
+
+
+if __name__ == "__main__":
+    test_registration()
+    test_edit_profile()
